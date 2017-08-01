@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Project Name:</strong>
+  <%= @project.name %>
+</h2>
+<h4>Updates</h4>
+
+
+
+<% getCommits(@project.github_name).each do |commit| %>
+  <p><%= commit.commit.message %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
