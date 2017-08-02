@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :project_name %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="field mb-10">
+        <%= form.text_field :name, id: :project_name, placeholder: 'New Project Name', class: 'form-control' %>
+      </div>
+
+      <div class="field mb-10">
+        <%= form.text_field :github_name, id: :project_github_name, placeholder: 'Github Repo Name', class: 'form-control' %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Submit", class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :github_name %>
-    <%= form.text_field :github_name, id: :project_github_name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
