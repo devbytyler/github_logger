@@ -11,7 +11,7 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item table-title">Updates</li>
     <% getCommits(@project.github_name).each do |commit| %>
-      <li class="list-group-item">
+      <li class="list-group-item item">
         <span class="time-phrase col-sm-2">
           <%= distance_of_time_in_words(commit.commit.author.date, Time.now) %> ago
         </span>

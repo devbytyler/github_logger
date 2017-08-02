@@ -1,14 +1,45 @@
 @import "bootstrap";
 
+.main-container {
+  background: #eeeeee;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
 .time-phrase {
   color: #aaa;
   font-style: italic;
 }
 
 .table-title {
-  background: #dedede;
+  color: white;
+  background: #0275d8;
 }
 
 .commits-card {
   margin-top: 20px;
+  .item {
+    &:hover {
+      background: #fafafa;
+    }
+  }
+}
+
+.projects {
+  margin-top: 30px;
+  .project {
+    margin-right: 20px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1pt rgba(0,0,0,0) solid;
+    &:hover {
+      border: 1pt #ddd solid;
+    }
+    .project_card_title {
+      margin-bottom: 20px;
+    }
+  }
 }
